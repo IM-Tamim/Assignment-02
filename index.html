@@ -16,60 +16,67 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </head>
   <body class="font-['Inter']">
     <header>
       <nav
-        class="bg-[#0f0f2f] px-[12rem] py-[1.2rem] flex items-center justify-between"
+        class="bg-[#0f0f2f] px-[12rem] py-[1.2rem] flex items-center justify-between relative z-50"
       >
         <div class="text-white font-bold text-2xl">
           Tech<span class="text-pink-500">Wave</span>
         </div>
 
-        <div class="flex text-white font-medium">
-          <a href="" class="mr-8">About</a>
-          <a href="" class="mr-8">Episodes</a>
-          <a href="">Host</a>
+        <div class="nav-links text-white font-medium">
+          <a href="" class="mr-8 hover:text-pink-500">About</a>
+          <a href="" class="mr-8 hover:text-pink-500">Episodes</a>
+          <a href="" class="hover:text-pink-500">Host</a>
         </div>
 
-        <div>
+        <div class="subscribe-btn">
           <button class="btn">Subscribe →</button>
+        </div>
+
+        <div class="mobile-menu relative">
+          <input id="menu-toggle" type="checkbox" class="peer hidden" />
+          <label for="menu-toggle" class="text-white text-2xl cursor-pointer">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+
+          <div
+            class="mobile-nav absolute top-full right-0 mt-2 w-56 bg-[#0f0f2f] text-white flex flex-col gap-4 p-4 rounded-lg hidden peer-checked:flex z-50"
+          >
+            <a href="" class="hover:text-pink-500">About</a>
+            <a href="" class="hover:text-pink-500">Episodes</a>
+            <a href="" class="hover:text-pink-500">Host</a>
+            <button class="btn w-full mt-2">Subscribe →</button>
+          </div>
         </div>
       </nav>
 
       <section
-        class="h-[47.5rem] bg-[url('./assets/hero-bg.png')] bg-cover bg-center flex justify-center items-center text-white"
+        class="w-full bg-[url('./assets/hero-bg.png')] bg-cover bg-center flex justify-center items-center text-white py-16"
       >
-        <div class="text-center w-[420px]">
-          <!-- ONLY relative container -->
-          <div class="relative mx-auto w-[21.875rem] h-[21.875rem]">
-            <!-- Gradient circle IMAGE -->
+        <div class="text-center w-[90%] max-w-[420px]">
+          <div class="relative mx-auto hero-circle">
             <img
               src="./assets/hero-circle.png"
               alt="Hero Circle"
-              class="absolute inset-0 w-full h-full object-contain"
+              class="w-full h-auto object-contain"
             />
 
-            <!-- Mic on top -->
             <div class="absolute inset-0 flex justify-center items-center">
               <img
                 src="./assets/microphone.png"
                 alt="Microphone"
-                class="w-[5rem]"
+                class="w-1/4"
               />
             </div>
 
-            <div
-              class="absolute top-4 right-4 bg-green-400 text-black text-[1.125rem] font-bold px-3 py-1 rounded-full"
-            >
-              NEW
+            <div class="absolute" style="top: 5%; right: 5%">
+              <span
+                class="bg-green-400 text-black text-[0.9rem] font-bold px-2 py-1 rounded-full"
+                >NEW</span
+              >
             </div>
           </div>
 
@@ -80,7 +87,7 @@
             growth
           </p>
 
-          <div class="mt-6 flex justify-center gap-4">
+          <div class="mt-6 flex justify-center gap-4 flex-wrap">
             <button class="btn">
               <i class="fa-brands fa-spotify"></i> Listen On Spotify
             </button>

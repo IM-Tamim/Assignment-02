@@ -1,4 +1,4 @@
-.btn{
+.btn {
   background: linear-gradient(to right, #f5fc37a1, #ff006afa);
   color: white;
   padding: 12.5px 16px;
@@ -8,11 +8,75 @@
   font-size: 1rem;
   font-weight: 500;
   transition: all 0.5s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(255, 253, 253, 0.2);
-  background: linear-gradient(to right, #001eff, #d6b1b7); 
+  background: linear-gradient(to right, #001eff, #d6b1b7);
+}
+
+.nav-links,
+.subscribe-btn {
+  display: flex; 
+}
+
+.mobile-menu {
+  display: none; 
+}
+
+.menu-toggle:checked + label + .mobile-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.hero-circle {
+  width: 80%;
+  max-width: 350px;
+}
+
+.microphone {
+  width: 5rem;
+}
+
+.new-badge {
+  font-size: 1.125rem;
+  top: 1rem;
+  right: 1rem;
+}
+
+
+@media (max-width: 576px) {
+
+
+  .nav-links,
+  .subscribe-btn {
+    display: none; 
+  }
+
+  .mobile-menu {
+    display: block; 
+  }
+
+  nav {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .hero-circle {
+    width: 60%;
+    max-width: 250px;
+  }
+
+  .microphone {
+    width: 25%;
+  }
+
+  .new-badge {
+    font-size: 0.8rem;
+    top: 5%;
+    right: 5%;
+  }
 }
