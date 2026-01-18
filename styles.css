@@ -131,4 +131,22 @@
       "exclusive"
       "rich";
   }
+  .mhost {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+  .featured {
+    padding: 40px 20px 60px;
+  }
+  .vid {
+    grid-template-columns: 1fr;
+  }
+  .challenge {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .social-container {
+    justify-content: center;
+  }
 }
