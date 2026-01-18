@@ -1,0 +1,18 @@
+.btn{
+  background: linear-gradient(to right, #f5fc37a1, #ff006afa);
+  color: white;
+  padding: 12.5px 16px;
+  border-radius: 200px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(255, 253, 253, 0.2);
+  background: linear-gradient(to right, #001eff, #d6b1b7); 
+}
